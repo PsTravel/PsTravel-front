@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel/screens/main_route.dart';
+import 'package:travel/screens/main_route_screen.dart';
 
 void main() {
   runApp(const App());
@@ -21,6 +21,6 @@ class App extends StatelessWidget {
               ),
             ),
             cardColor: const Color(0xFFF4EDDB)),
-        home: const MainRoute());
+        home: const MainRouteScreen());
   }
 }
