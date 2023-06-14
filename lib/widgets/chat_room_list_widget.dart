@@ -45,7 +45,7 @@ class ChatRoomList extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(chatRoom.opponent),
-                  const Text("contents"),
+                  Text(chatRoom.lastMessage),
                 ],
               )
             ],
