@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:travel/services/chat_api_service.dart';
 
 class ChatInput extends StatefulWidget {
   const ChatInput({super.key});
 
   @override
-  State<ChatInput> createState() => _ChatInput();
+  State<ChatInput> createState() => _ChatInputState();
 }
 
-class _ChatInput extends State<ChatInput> {
-  final String value = "";
+class _ChatInputState extends State<ChatInput> {
+  String value = "";
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,11 @@ class _ChatInput extends State<ChatInput> {
             },
           ),
         ),
-        IconButton(onPressed: () {}, icon: const Icon(Icons.send_rounded))
+        IconButton(
+            onPressed: () {
+              ChatApiService.sendMessage();
+            },
+            icon: const Icon(Icons.send_rounded))
       ],
     );
   }
